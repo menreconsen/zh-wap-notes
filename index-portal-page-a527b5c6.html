@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再访 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f9f6ef;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+            color: #3e3a35;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background-color: #fefcf7;
+            padding: 2.8rem 2.2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02);
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #2c2824;
+            margin-top: 0.2rem;
+            margin-bottom: 0.5rem;
+            border-left: 3px solid #c9b69a;
+            padding-left: 1.2rem;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #8b7f72;
+            margin-bottom: 2.2rem;
+            font-style: italic;
+            padding-left: 1.5rem;
+        }
+        p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+        }
+        p.no-indent {
+            text-indent: 0;
+        }
+        .opening {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            background: #f5f0e8;
+            padding: 1.2rem 1.8rem;
+            border-radius: 14px;
+            margin-bottom: 2rem;
+            text-indent: 0;
+            font-style: normal;
+            quotes: "“" "”" "‘" "’";
+        }
+        .opening::before {
+            content: "“";
+            font-size: 2.2rem;
+            color: #b8a48c;
+            margin-right: 6px;
+            vertical-align: -4px;
+        }
+        .opening::after {
+            content: "”";
+            font-size: 2.2rem;
+            color: #b8a48c;
+            margin-left: 6px;
+            vertical-align: -4px;
+        }
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.2rem 2rem;
+            background: #efe9df;
+            border-left: 4px solid #c4b099;
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            color: #4a433b;
+            text-indent: 0;
+        }
+        blockquote p {
+            text-indent: 0;
+            margin-bottom: 0.4rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.4rem;
+            margin: 2.2rem 0;
+        }
+        .feature-card {
+            background: #faf7f1;
+            padding: 1.3rem 1.2rem;
+            border-radius: 16px;
+            border: 1px solid #e7ddd0;
+            transition: background 0.2s;
+        }
+        .feature-card:hover {
+            background: #f2ece2;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #4f463e;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.5px;
+        }
+        .feature-card p {
+            text-indent: 0;
+            font-size: 0.92rem;
+            color: #625a50;
+            margin-bottom: 0;
+        }
+        .note-box {
+            background: #e9e1d4;
+            padding: 1.2rem 1.8rem;
+            border-radius: 18px;
+            margin: 2rem 0;
+            border: 1px dashed #c5b6a3;
+        }
+        .note-box p {
+            text-indent: 0;
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+        .faq-mini {
+            margin: 2.2rem 0 1.5rem 0;
+            border-top: 1px solid #dfd5c6;
+            padding-top: 1.6rem;
+        }
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #ede7dd;
+        }
+        .faq-item strong {
+            color: #4f463e;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .faq-item p {
+            text-indent: 0;
+            font-size: 0.92rem;
+            margin-bottom: 0.3rem;
+        }
+        .action-line {
+            text-align: center;
+            padding: 1.6rem 0 0.6rem 0;
+            font-size: 1rem;
+            border-top: 1px solid #e3d9cb;
+            margin-top: 2rem;
+        }
+        .action-line a {
+            color: #7f6a54;
+            text-decoration: none;
+            border-bottom: 1.5px solid #cbb9a6;
+            padding-bottom: 2px;
+            font-weight: 500;
+            transition: color 0.15s, border-color 0.15s;
+        }
+        .action-line a:hover {
+            color: #4d3d2f;
+            border-bottom-color: #8a755f;
+        }
+        .footer-note {
+            font-size: 0.85rem;
+            color: #9b8f81;
+            text-align: center;
+            margin-top: 2.8rem;
+            border-top: 1px solid #eee7dd;
+            padding-top: 1.4rem;
+        }
+        @media (max-width: 580px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.6rem 1rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .opening {
+                font-size: 1rem;
+                padding: 1rem 1.2rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            blockquote {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <h1>爱游戏 · 再访备忘</h1>
+    <div class="subhead">—— 一份来自收藏夹深处的重新翻阅</div>
+
+    <p class="opening no-indent">
+        当浏览器书签列表越拉越长，有些地址却值得你一而再地停驻。<br>
+        这次，我重新点开了那个标记为「<a href="https://index-portal-igame.com" style="color:#7f6a54; text-decoration:underline; text-underline-offset:3px;">爱游戏</a>」的页面，
+        发现它比记忆中更加沉静、有序。
+    </p>
+
+    <!-- 承接段落：从收藏与回访切入 -->
+    <p>
+        收藏一个网站，往往只需要一瞬的共鸣；而持续回访，则需要某种不易察觉的信任。过去几个月里，我偶尔打开这个链接，看到的不是频繁变动的横幅或弹窗，而是一套始终如一的索引结构——它不试图用闪烁的色块抓住你的视线，而是把选择权交还给访客。对于我这种习惯反复比较信息、慢慢做决定的人来说，这种克制反而成了一种可靠的引力。
+    </p>
+    <p>
+        或许你也有类似感受：一个被标记为“待细看”的网址，常常在沉默的标签页里躺上数周。但当你真正抽时间点开它时，会重新发现当初收藏它的理由。对我而言，<a href="https://index-portal-igame.com" style="color:#7f6a54; text-decoration:underline; text-underline-offset:3px;">爱游戏</a> 就是这样一个页面——它不催促你“马上探索”，而是安静地陈列着入口，等你准备好了再进入。
+    </p>
+
+    <!-- 特点列表（双栏卡片） -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>· 索引即结构</h3>
+            <p>没有多余的动画或广告干扰，分类条目清晰直接，适合反复查阅与比对。</p>
+        </div>
+        <div class="feature-card">
+            <h3>· 视觉留白</h3>
+            <p>页面呼吸感充足，文字间距与色彩对比温和，降低长时间浏览的视觉疲劳。</p>
+        </div>
+        <div class="feature-card">
+            <h3>· 收藏友好</h3>
+            <p>固定式布局与稳定的资源路径，加入书签后不必担心链接失效或布局错乱。</p>
+        </div>
+        <div class="feature-card">
+            <h3>· 持续可访</h3>
+            <p>保持基础可用性，不依赖复杂脚本，从移动端到桌面端均能顺畅加载。</p>
+        </div>
+    </div>
+
+    <!-- 引用块：温和的提醒 -->
+    <blockquote>
+        <p>“收藏夹里的每一个链接，都是一次未曾完成的对话。<br>
+        有时候，第二次打开才是真正的开始。”</p>
+    </blockquote>
+
+    <!-- 场景段落：持续关注 -->
+    <p>
+        有一类网站，你并不需要每天登录，但每隔一段时间就会想回去看看——就像一本翻到某页折角的书。我通常在周末的下午打开 <a href="https://index-portal-igame.com" style="color:#7f6a54; text-decoration:underline; text-underline-offset:3px;">爱游戏</a>，顺着索引浏览一遍，偶尔发现之前忽略的条目。这种节奏很慢，但很踏实。它不需要我注册或订阅，也不需要我留下任何数据；它的存在本身，就是一份可供随时查阅的索引。
+    </p>
+
+    <!-- 提示 / 附注框 -->
+    <div class="note-box">
+        <p><strong>📌 一个小建议</strong></p>
+        <p>如果你也把它放进了书签，不妨每隔几周点开一次。页面不会变样，但你的关注角度可能会不同——这大概就是索引页的妙处：它永远在那里，等你带着新问题回来。</p>
+    </div>
+
+    <!-- 迷你 FAQ 摘要 -->
+    <div class="faq-mini">
+        <div class="faq-item">
+            <strong>Q：这个页面主要提供什么？</strong>
+            <p>A：一组结构化索引，指向与游戏相关的各类内容资源，侧重分类清晰和长期可访问性。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q：适合什么样的人收藏？</strong>
+            <p>A：适合习惯整理信息、喜欢安静浏览、不希望被频繁推送打扰的玩家或研究者。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q：需要注册或登录吗？</strong>
+            <p>A：不需要。页面完全公开，所有索引直接可见，无需任何账号操作。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 + 链接自然嵌入 -->
+    <div class="action-line">
+        <p>如果你还没有把它加入书签，或许现在可以试试：<br>
+        <a href="https://index-portal-igame.com">爱游戏</a> · 一份值得反复翻阅的索引</p>
+    </div>
+
+    <div class="footer-note">
+        — 写于一个安静的午后 · 收藏夹清理日 —
+    </div>
+
+</div>
+</body>
+</html>
