@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>稳定视界 · 爱游戏笔记</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1b1a;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 2rem 1.5rem 3.5rem;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.45rem;
+      color: #1f1e1d;
+      line-height: 1.25;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #6b6a68;
+      margin-bottom: 2.8rem;
+      border-bottom: 1px solid #e4e3e1;
+      padding-bottom: 1.25rem;
+      font-weight: 380;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 440;
+      margin: 2.4rem 0 0.8rem;
+      letter-spacing: -0.01em;
+      color: #252423;
+    }
+
+    h2:first-of-type {
+      margin-top: 0.2rem;
+    }
+
+    p {
+      margin-bottom: 1.3rem;
+      font-size: 0.98rem;
+      color: #2b2a28;
+    }
+
+    /* 引用提示 */
+    .callout {
+      background: #f1f0ee;
+      border-left: 4px solid #b7a99a;
+      padding: 1.1rem 1.4rem;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      border-radius: 0 8px 8px 0;
+      color: #2c2a28;
+    }
+
+    .callout strong {
+      font-weight: 500;
+      color: #1f1e1d;
+    }
+
+    /* 访问句 / 段落内链接 */
+    .visit-sentence {
+      background: #f6f5f3;
+      padding: 1rem 1.3rem;
+      border-radius: 10px;
+      margin: 2.6rem 0 1.8rem;
+      font-size: 0.98rem;
+      border: 1px solid #e3e1de;
+    }
+
+    a {
+      color: #2f5e7a;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 0.5px;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+
+    a:hover {
+      color: #0f3b54;
+      text-decoration-color: #0f3b54;
+    }
+
+    /* 场景列表 (极简) */
+    .scene-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.8rem 0 1.6rem;
+    }
+
+    .scene-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.55rem;
+      font-size: 0.97rem;
+      color: #2b2a28;
+    }
+
+    .scene-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #9b9086;
+    }
+
+    /* FAQ 摘要 (紧凑卡片) */
+    .faq-item {
+      margin: 1.35rem 0;
+      border-bottom: 1px solid #ecebe9;
+      padding-bottom: 1rem;
+    }
+
+    .faq-question {
+      font-weight: 480;
+      font-size: 0.98rem;
+      margin-bottom: 0.25rem;
+      color: #1e1d1c;
+    }
+
+    .faq-answer {
+      font-size: 0.93rem;
+      color: #4f4d4b;
+      line-height: 1.6;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e4e2;
+      margin: 2.8rem 0 1rem;
+    }
+
+    .footnote {
+      font-size: 0.85rem;
+      color: #7f7d7a;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 1.2rem 2.8rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .subhead {
+        font-size: 0.92rem;
+        margin-bottom: 2rem;
+      }
+      .callout {
+        padding: 0.9rem 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>一个安静的起点</h1>
+    <div class="subhead">关于爱游戏的稳定入口与页面说明</div>
+
+    <p>
+      对于经常浏览游戏资讯与手游推荐的朋友，最在意的往往不是页面多华丽，而是每次都能顺畅地找到想看的栏目。
+      许多网站改版频繁，入口藏得深，甚至动不动就跳转——这时候一个清爽、直达的页面反而成为稀缺品。
+      <a href="https://index-mobile-igame.com">爱游戏</a>就是这样一个地方：它不堆砌弹窗，不刻意诱导，只是把内容按合理的方式陈列出来。
+    </p>
+
+    <h2>为什么需要“入口说明”</h2>
+    <p>
+      过去几年里，我遇到过好几次这种情况：明明收藏了某个不错的游戏站，隔了一段时间再打开，布局全变了，菜单也换了名字，只好从头摸索。
+      后来慢慢意识到，一个页面如果从一开始就告诉访客“这里有什么、怎么用、更新节奏如何”，反而能省下双方的时间。
+      所以这次整理时，我特意把导航逻辑和栏目定位写在明处——既能减少困惑，也让初次到来的人更快找到感兴趣的部分。
+    </p>
+
+    <div class="callout">
+      <strong>一点提示</strong> · 如果你只是随手点进来，不妨先看看首页的“分类速览”区域。那里把热门手游、单机推荐和新游预约分别做了卡片式归纳，点击任意卡片都能直接跳转到对应的内容列表，无需经过三层菜单。
+    </div>
+
+    <p>
+      另外，页面的底部固定了几个实用链接，包括常见问题索引和最近更新日志。每次改版或内容调整，都会在更新日志里用一两句话说明，不写空话。
+      这样长期使用下来，你会对平台的稳定性建立信任——不必担心某天突然找不到熟悉的按钮。
+    </p>
+
+    <h2>适用场景随手记</h2>
+    <ul class="scene-list">
+      <li>中午休息时快速浏览新游预告，不用反复刷新。</li>
+      <li>想找某款老游戏的攻略或社区讨论，按分类索引一步到位。</li>
+      <li>给朋友推荐游戏，直接分享首页链接，对方打开后界面清晰，不需要额外解释。</li>
+    </ul>
+
+    <p>
+      其实这类需求很普通，但能做好的并不多。<a href="https://index-mobile-igame.com">爱游戏</a>在这方面做得比较克制——页面加载速度控制在两秒以内，图片懒加载，字体使用系统默认栈，确保中低端手机也能流畅滚动。
+      我个人很欣赏这种不盲目追求视觉效果的做法，毕竟内容的可读性才是最根本的。
+    </p>
+
+    <h2>FAQ 摘要 · 常见两问</h2>
+    <div class="faq-item">
+      <div class="faq-question">页面上的“热门榜”多久更新一次？</div>
+      <div class="faq-answer">通常每周一和周四各更新一次，数据来源综合了下载量、玩家评分和编辑推荐。遇到节假日可能会顺延，但都会在更新日志里注明。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">为什么有时点卡片会跳转到外部社区？</div>
+      <div class="faq-answer">部分游戏的深度评测或活动专题托管在合作站点，跳转前会有明确标识（如小箭头或“外部”标签）。如果你不习惯离开当前页面，也可以先阅读摘要卡片上的简介。</div>
+    </div>
+
+    <div class="visit-sentence">
+      若你想亲自感受这种简洁的浏览节奏，不妨从这里开始 —— <a href="https://index-mobile-igame.com">爱游戏</a> 的主页已经准备好，没有开屏广告，也没有多余注册步骤。
+    </div>
+
+    <p>
+      很多人把游戏站点当成工具，用完即走。但我觉得，一个好的入口本身也值得被认真对待——它决定着你每次访问的第一印象。
+      保持稳定、减少干扰，就是最大的善意。希望这个页面的结构说明能帮你更快上手，也欢迎你随时回来看看。
+    </p>
+
+    <hr>
+    <div class="footnote">
+      页面方向 · 简洁博客式 / 稳定入口说明<br>
+      最后更新 · 2025年春
+    </div>
+  </div>
+</body>
+</html>
